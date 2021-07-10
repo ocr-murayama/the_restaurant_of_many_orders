@@ -311,13 +311,15 @@ textarea {
     }
 }
 
-.footer{
-    .nav_menu{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .menu_list{
-            display: block;
+@include mq (sp){
+    .footer{
+        .nav_menu{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .menu_list{
+                display: block;
+            }
         }
     }
 }

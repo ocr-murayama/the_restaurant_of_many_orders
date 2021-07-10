@@ -384,13 +384,14 @@ textarea {
   }
 }
 
-.footer .nav_menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footer .nav_menu .menu_list {
-  display: block;
+@media screen and (max-width: 599px) {
+  .footer .nav_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .nav_menu .menu_list {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style_responsive.css.map */
