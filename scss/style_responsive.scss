@@ -24,6 +24,7 @@ html{
     background-blend-mode: lighten;
     @include mq (sp){
         padding: 1rem;
+        word-break: break-all;
     }
 }
 .logo{
@@ -227,6 +228,7 @@ iframe {
             }
         }
         @include mq(sp){
+            word-break: keep-all;
             text-align: center;
             .news_date,
             .news_text{
