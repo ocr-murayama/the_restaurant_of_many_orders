@@ -292,8 +292,8 @@ iframe {
     word-break: keep-all;
     text-align: center;
   }
-  #news .news_contents .news_date,
-  #news .news_contents .news_text {
+  #news .news_contents .news_box .news_date,
+  #news .news_contents .news_box .news_text {
     margin: 0;
   }
 }

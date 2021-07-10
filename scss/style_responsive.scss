@@ -230,8 +230,8 @@ iframe {
         @include mq(sp){
             word-break: keep-all;
             text-align: center;
-            .news_date,
-            .news_text{
+            .news_box .news_date,
+            .news_box .news_text{
                 margin: 0;
             }
         }
