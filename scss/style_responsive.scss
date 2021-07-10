@@ -228,7 +228,6 @@ iframe {
             }
         }
         @include mq(sp){
-            word-break: keep-all;
             text-align: center;
             .news_box .news_date,
             .news_box .news_text{

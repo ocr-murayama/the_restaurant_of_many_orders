@@ -289,7 +289,6 @@ iframe {
 
 @media screen and (max-width: 599px) {
   #news .news_contents {
-    word-break: keep-all;
     text-align: center;
   }
   #news .news_contents .news_box .news_date,
