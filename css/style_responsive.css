@@ -5,6 +5,12 @@ html {
   font-size: 62.5%;
 }
 
+@media screen and (max-width: 599px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
 .wrap {
   width: 100%;
   padding: 3rem;
@@ -16,8 +22,20 @@ html {
   background-blend-mode: lighten;
 }
 
+@media screen and (max-width: 599px) {
+  .wrap {
+    padding: 1rem;
+  }
+}
+
 .logo {
   width: 10rem;
+}
+
+@media screen and (max-width: 599px) {
+  .logo {
+    width: 7rem;
+  }
 }
 
 .header {
@@ -47,9 +65,22 @@ html {
   font-family: "Patrick Hand", cursive;
 }
 
+@media screen and (max-width: 599px) {
+  .header .header_box .company_name::after {
+    display: block;
+    font-size: 1.2rem;
+  }
+}
+
 .header .header_box .header_text {
   font-size: 1.4rem;
   width: 22rem;
+}
+
+@media screen and (max-width: 599px) {
+  .header .header_box .header_text {
+    width: 100%;
+  }
 }
 
 .header .telephone {
@@ -62,6 +93,12 @@ html {
 
 .header .telephone .fa-phone {
   margin-right: 1.5rem;
+}
+
+@media screen and (max-width: 599px) {
+  .header .telephone {
+    display: none;
+  }
 }
 
 .nav_menu {
@@ -85,8 +122,20 @@ html {
   background-color: #008000;
 }
 
+@media screen and (max-width: 599px) {
+  .nav_menu {
+    display: none;
+  }
+}
+
 .top_img {
-  width: 90vw;
+  width: 100%;
+}
+
+@media screen and (max-width: 599px) {
+  .top_img {
+    margin-top: 2rem;
+  }
 }
 
 .contents_title {
@@ -96,6 +145,12 @@ html {
   background-color: #e6ffe6;
   padding: 3rem 0;
   margin: 2rem 0;
+}
+
+@media screen and (max-width: 599px) {
+  .contents_title {
+    padding: 1rem 0;
+  }
 }
 
 .pickup_contents {
@@ -119,6 +174,16 @@ html {
   margin: 1rem;
 }
 
+@media screen and (max-width: 599px) {
+  .pickup_contents {
+    flex-wrap: wrap;
+  }
+  .pickup_contents .pickup_box {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .product_contents {
   display: flex;
   flex-direction: column;
@@ -131,7 +196,7 @@ html {
 }
 
 .product_contents .product_box .product_img {
-  width: 40%;
+  width: 45%;
 }
 
 .product_contents .product_box .product_text_box {
@@ -143,8 +208,31 @@ html {
   margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 599px) {
+  .product_contents .product_box {
+    padding: 0;
+    word-break: break-word;
+  }
+  .product_contents .product_box .product_text_box {
+    margin-right: 0;
+  }
+}
+
 .product_contents .text_left {
   flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 599px) {
+  .product_contents .text_left {
+    flex-direction: column;
+  }
+  .product_contents .text_left iframe {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .product_contents .text_left .product_text_box {
+    width: 100%;
+  }
 }
 
 iframe {
@@ -162,6 +250,18 @@ iframe {
   width: 40%;
   margin-bottom: 4rem;
   margin-right: 4rem;
+}
+
+@media screen and (max-width: 599px) {
+  .detailed_contents {
+    width: 100%;
+    margin: 0;
+  }
+  .detailed_contents .detailed_img {
+    width: 65%;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 #news {
@@ -186,6 +286,16 @@ iframe {
   margin-left: 2rem;
 }
 
+@media screen and (max-width: 599px) {
+  #news .news_contents {
+    text-align: center;
+  }
+  #news .news_contents .news_date,
+  #news .news_contents .news_text {
+    margin: 0;
+  }
+}
+
 .company_contents {
   display: flex;
   justify-content: space-around;
@@ -199,6 +309,19 @@ iframe {
 
 .company_contents .company_text_box .company_text {
   margin: 1rem 0;
+}
+
+@media screen and (max-width: 599px) {
+  .company_contents {
+    flex-direction: column-reverse;
+  }
+  .company_contents iframe {
+    width: 100%;
+  }
+  .company_contents .company_text_box {
+    text-align: center;
+    margin-top: 2rem;
+  }
 }
 
 input[type="text"],
@@ -245,5 +368,28 @@ textarea {
   font-weight: bold;
   border-radius: 5rem;
   margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 599px) {
+  .contact_contents {
+    padding: 0;
+  }
+  .contact_contents .contact_form {
+    width: 100%;
+  }
+  .contact_contents .contact_form .form_input,
+  .contact_contents .contact_form .form_item {
+    padding: 5px;
+  }
+}
+
+.footer .nav_menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .nav_menu .menu_list {
+  display: block;
 }
 /*# sourceMappingURL=style_responsive.css.map */

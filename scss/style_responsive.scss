@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=RocknRoll+One&display=swap');
 @import "style_variables";
+@mixin mq($breakPoint: md) {
+    @media #{map-get($breakPoints, $breakPoint)} {
+        @content;
+    }
+}
 
 html{
     font-size: 62.5%;
+    @include mq(sp){
+        font-size: 62.5%;
+    }
 }
 .wrap{
     width: 100%;
@@ -14,10 +22,17 @@ html{
     background-image: url(../img/background.jpg);
     background-color: rgba(255,255,255,0.8);
     background-blend-mode: lighten;
+    @include mq (sp){
+        padding: 1rem;
+    }
 }
 .logo{
     width: 10rem;
+    @include mq (sp){
+        width: 7rem;
+    }
 }
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -36,11 +51,18 @@ html{
                 content: '～RESTAURANT WILDCAT HOUSE～';
                 font-size: 2rem;
                 font-family: $sub_font, cursive;
+                @include mq (sp){
+                    display: block;
+                    font-size: 1.2rem;
+                }
             }
         }
         .header_text{
             font-size: 1.4rem;
             width: 22rem;
+            @include mq(sp){
+                width: 100%;
+            }
         }
     }
     .telephone{
@@ -51,6 +73,9 @@ html{
         border-radius: 5rem;
         .fa-phone{
             margin-right: 1.5rem;
+        }
+        @include mq(sp){
+            display: none;
         }
     }
 }
@@ -72,11 +97,17 @@ html{
             }
         }
     }
+    @include mq(sp){
+        display: none;
+    }
 }
 
 
 .top_img{
-    width: 90vw;
+    width: 100%;
+    @include mq(sp){
+        margin-top: 2rem;
+    }
 }
 
 .contents_title{
@@ -86,6 +117,9 @@ html{
     background-color: $main_color;
     padding: 3rem 0;
     margin: 2rem 0;
+    @include mq(sp){
+        padding: 1rem 0;
+    }
 }
 
 .pickup_contents{
@@ -104,6 +138,13 @@ html{
             margin: 1rem;
         }
     }
+    @include mq(sp){
+        flex-wrap: wrap;
+        .pickup_box{
+            width: 100%;
+            text-align: center;
+        }
+    }
 }
 
 .product_contents{
@@ -114,7 +155,7 @@ html{
         align-items: center;
         padding: 0 2rem;
         .product_img{
-            width: 40%;
+            width: 45%;
         }
         .product_text_box{
             width: 50%;
@@ -123,9 +164,26 @@ html{
                 margin-bottom: 2rem;
             }
         }
+        @include mq(sp){
+            padding: 0;
+            word-break: break-word;
+            .product_text_box{
+                margin-right: 0;
+            }
+        }
     }
     .text_left{
         flex-direction: row-reverse;
+        @include mq(sp){
+            flex-direction: column;
+            iframe{
+                width: 100%;
+                margin-bottom: 3rem;
+            }
+            .product_text_box{
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -141,6 +199,15 @@ iframe {
         width: 40%;
         margin-bottom: 4rem;
         margin-right: 4rem;
+    }
+    @include mq(sp){
+        width: 100%;
+        margin: 0;
+        .detailed_img{
+            width: 65%;
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+        }
     }
 }
 
@@ -159,6 +226,13 @@ iframe {
                 margin-left: 2rem;
             }
         }
+        @include mq(sp){
+            text-align: center;
+            .news_date,
+            .news_text{
+                margin: 0;
+            }
+        }
     }
 }
 
@@ -171,6 +245,16 @@ iframe {
         justify-content: center;
         .company_text{
             margin: 1rem 0;
+        }
+    }
+    @include mq(sp){
+        flex-direction: column-reverse;
+        iframe{
+            width: 100%;
+        }
+        .company_text_box{
+            text-align: center;
+            margin-top: 2rem;
         }
     }
 }
@@ -212,6 +296,27 @@ textarea {
             font-weight: bold;
             border-radius: 5rem;
             margin-bottom: 4rem;
+        }
+    }
+    @include mq(sp){
+        padding: 0;
+        .contact_form{
+            width: 100%;
+            .form_input,
+            .form_item{
+                padding:5px;
+            }
+        }
+    }
+}
+
+.footer{
+    .nav_menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .menu_list{
+            display: block;
         }
     }
 }

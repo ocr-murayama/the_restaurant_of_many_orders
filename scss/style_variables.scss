@@ -4,3 +4,9 @@ $point_color : #008000;
 $main_font :'RocknRoll One';
 $sub_font :'Patrick Hand';
 
+$breakPoints: (
+    "xs": "screen and (max-width: 320px)",
+    "s": "screen and (max-width: 375px)",
+    "sp": "screen and (max-width: 599px)",
+    "ipad": "screen and (max-width: 768px)",
+);
